@@ -19,6 +19,7 @@ llvmPackages_14.stdenv.mkDerivation {
     go
     just
     k3d
+    kind
     kubectl
     nodejs
     openssl
