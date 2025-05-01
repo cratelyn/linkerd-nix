@@ -82,6 +82,7 @@ llvmPackages_14.stdenv.mkDerivation {
 
   CARGO_TERM_COLOR = "always";
   RUST_BACKTRACE = "full";
+  RUSTFLAGS = "--cfg tokio_unstable";
 
   LIBCLANG_PATH = "${llvmPackages_14.libclang.lib}/lib";
   ASM = "${stdenv.cc}";
