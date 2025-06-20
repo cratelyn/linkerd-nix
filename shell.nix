@@ -21,6 +21,7 @@ llvmPackages_14.stdenv.mkDerivation {
     k3d
     kind
     kubectl
+    kubernetes-helm
     nodejs
     openssl
     pkg-config
