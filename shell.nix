@@ -29,6 +29,7 @@ llvmPackages_14.stdenv.mkDerivation {
     rustup
     shellcheck
     stdenv
+    step-cli
     # vscode
   ] ++ lib.optional stdenv.isDarwin [ Security libiconv ];
 
