@@ -17,6 +17,7 @@ llvmPackages_14.stdenv.mkDerivation {
     docker
     git
     go
+    grype
     just
     k3d
     kind
@@ -30,6 +31,7 @@ llvmPackages_14.stdenv.mkDerivation {
     shellcheck
     stdenv
     step-cli
+    syft
     yq-go
     # vscode
   ] ++ lib.optional stdenv.isDarwin [ Security libiconv ];
