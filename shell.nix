@@ -2,6 +2,13 @@ scope@{ pkgs ? import <nixpkgs> { } }:
 
 let
   locale = "en_US.UTF8";
+  linkerd-dev = pkgs.fetchFromGitHub {
+    owner = "linkerd";
+    repo = "dev";
+    rev = "v47";
+    sha256 = "O/fVlErbv3PyjlCd/3UYPdI5h4Cyg6f3k4Jw5hksFJM=";
+    sparseCheckout = ["bin/"];
+  };
 in with pkgs;
 llvmPackages_14.stdenv.mkDerivation {
   name = "linkerd-proxy-shell";
@@ -23,6 +30,7 @@ llvmPackages_14.stdenv.mkDerivation {
     kind
     kubectl
     kubernetes-helm
+    linkerd-dev
     nodejs
     openssl
     pkg-config
