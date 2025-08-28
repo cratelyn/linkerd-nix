@@ -38,6 +38,17 @@ llvmPackages_14.stdenv.mkDerivation {
   ] ++ lib.optional stdenv.isDarwin [ Security libiconv ];
 
   shellHook = ''
+    # adds the `just-*` dev utilities to the path, if a path to linkerd/dev
+    # is provided. by default this will not be included, but these utilities can
+    # be included by calling:
+    # ```
+    # LINKERD_DEV="/some/path" nix-shell shell.nix
+    # ```
+    if [[ $LINKERD_DEV != "" ]];
+    then
+      export PATH="$PATH:$LINKERD_DEV/bin"
+    fi
+
     # set up a shorter alias for kubectl.
     alias k="kubectl"
 
