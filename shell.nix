@@ -12,12 +12,17 @@ llvmPackages_14.stdenv.mkDerivation {
     bashInteractive
     binutils
     cacert
+    cargo-deny
+    cargo-nextest
     cmake
     direnv
     docker
     git
     go
+    golangci-lint
+    gotestsum
     grype
+    jq
     just
     k3d
     kind
