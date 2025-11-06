@@ -29,6 +29,7 @@ llvmPackages_14.stdenv.mkDerivation {
     golangci-lint
     gotestsum
     grype
+    helm-docs
     jq
     just
     k3d
